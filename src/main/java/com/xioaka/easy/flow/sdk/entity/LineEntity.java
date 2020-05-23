@@ -1,6 +1,7 @@
 package com.xioaka.easy.flow.sdk.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -15,7 +16,9 @@ public class LineEntity {
     @TableId(type = IdType.ID_WORKER_STR)
     private String id;
     private String projectId;
+    @TableField(value = "`from`")
     private String from;
+    @TableField(value = "`to`")
     private String to;
     private String label;
 }

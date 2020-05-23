@@ -25,6 +25,13 @@ public class LineServiceImpl extends ServiceImpl<LineDao, LineEntity> implements
     }
 
     @Override
+    public void deleteByProjectId(String projectId) {
+        LambdaQueryWrapper<LineEntity> deleteWrapper = new LambdaQueryWrapper<>();
+        deleteWrapper.eq(LineEntity::getProjectId, projectId);
+        remove(deleteWrapper);
+    }
+
+    @Override
     public void delete(String from, String to) {
         LambdaQueryWrapper<LineEntity> delWrapper = new LambdaQueryWrapper<>();
         delWrapper.eq(LineEntity::getFrom, from).eq(LineEntity::getTo, to);

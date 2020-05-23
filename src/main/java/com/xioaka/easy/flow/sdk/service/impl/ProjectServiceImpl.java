@@ -40,4 +40,11 @@ public class ProjectServiceImpl extends ServiceImpl<ProjectDao, ProjectEntity> i
         projectVo.setLineList(lineList);
         return projectVo;
     }
+
+    @Override
+    public void delete(String projectId) {
+        removeById(projectId);
+        nodeService.deleteByProjectId(projectId);
+        lineService.deleteByProjectId(projectId);
+    }
 }

@@ -1,6 +1,7 @@
 package com.xioaka.easy.flow.sdk.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -17,6 +18,10 @@ public class NodeEntity {
     private String projectId;
     private String name;
     private String type;
+    @TableField(value = "`left`")
     private String left;
+    @TableField(value = "`top`")
     private String top;
+    private String ico;
+    private String state;
 }

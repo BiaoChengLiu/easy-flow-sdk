@@ -18,6 +18,8 @@ public interface ILineService extends IService<LineEntity> {
      */
     List<LineEntity> queryByProjectId(String projectId);
 
+    void deleteByProjectId(String projectId);
+
     /**
      * 根据起始节点删除
      *

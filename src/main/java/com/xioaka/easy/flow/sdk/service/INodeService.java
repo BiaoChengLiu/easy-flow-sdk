@@ -18,6 +18,8 @@ public interface INodeService extends IService<NodeEntity> {
      */
     List<NodeEntity> queryByProjectId(String projectId);
 
+    void deleteByProjectId(String projectId);
+
     /**
      * 更改坐标
      *

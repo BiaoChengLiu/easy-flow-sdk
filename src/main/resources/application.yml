@@ -1,8 +1,5 @@
 server:
   port: 8080
-  servlet:
-    context-path: /easy-flow
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/easy_flow?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false

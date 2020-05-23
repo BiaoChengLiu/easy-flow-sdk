@@ -30,6 +30,13 @@ public class NodeServiceImpl extends ServiceImpl<NodeDao, NodeEntity> implements
     }
 
     @Override
+    public void deleteByProjectId(String projectId) {
+        LambdaQueryWrapper<NodeEntity> deleteWrapper = new LambdaQueryWrapper<>();
+        deleteWrapper.eq(NodeEntity::getProjectId, projectId);
+        remove(deleteWrapper);
+    }
+
+    @Override
     public void changeSite(String nodeId, String left, String top) {
         LambdaUpdateWrapper<NodeEntity> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.set(NodeEntity::getLeft, left).set(NodeEntity::getTop, top).eq(NodeEntity::getId, nodeId);

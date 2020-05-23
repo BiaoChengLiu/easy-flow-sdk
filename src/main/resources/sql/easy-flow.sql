@@ -13,6 +13,8 @@ CREATE TABLE `flow_node` (
   `name` varchar(100) NOT NULL COMMENT '名称',
   `left` varchar(100) NOT NULL COMMENT '坐标',
   `top` varchar(100) NOT NULL COMMENT '坐标',
+  `ico` varchar(100) NOT NULL COMMENT '图标',
+  `state` varchar(100) NOT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
 );
 

@@ -16,4 +16,11 @@ public interface IProjectService extends IService<ProjectEntity> {
      * @return
      */
     ProjectVo queryData(String projectId);
+
+    /**
+     * 删除
+     *
+     * @param projectId
+     */
+    void delete(String projectId);
 }
